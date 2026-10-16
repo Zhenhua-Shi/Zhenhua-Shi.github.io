@@ -1,24 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>index</title>
-        <link rel="stylesheet" href="styles_selector.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <p id="p1">
-            Welcome to my web page!
-        </p>
-        
-        <p id="p2">
-            Visit <a href="https://www.google.com/"><span>Google</span></a> webpage
-        </p>  
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Number guessing game</title>
+    <link href="styles_selector.css" rel="stylesheet" type="text/css" />
+    <script defer src="script-ng.js"></script>
+  </head>
 
-        <form id="f1" action="https://www.google.com/search" method="get">
-            <input name="q" type="search">
-            <input type="submit" value="Google Search">
-        </form>
+  <body>
+    <h1 id="p1">Number Guessing Game</h1>
+      
+    <p id="p2">
+        Visit <a href="https://www.google.com/"><span>Google</span></a> webpage
+    </p>
+      
+    <form id="f1" action="https://www.google.com/search" method="get">
+        <input name="q" type="search">
+        <input type="submit" value="Google Search">
+    </form>
+      
+    <p>
+      A random number is selected between 1 and 100. See if you can guess
+      it in 10 turns or fewer. Each guess shows if your guess was too high or too
+      low.
+    </p>
 
-    </body>
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input type="number" min="1" max="100" required class="guessField" />
+      <input type="submit" value="Submit guess" class="guessSubmit" />
+    </div>
+
+    <div class="resultParas">
+      <p class="qty_guesses"></p>
+      <p class="history_guesses"></p>
+      <p class="last_guess"></p>
+      <p class="low_high"></p>
+    </div>
+  </body>
 </html>
